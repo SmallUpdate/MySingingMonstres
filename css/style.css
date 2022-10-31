@@ -1,0 +1,418 @@
+* {
+    font-family: Montserrat;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hamburger-menu {
+    display: none;
+    transition: 0.4s;
+    top: -160px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.hamburger-menu-show {
+    transform: translateY(240px);
+}
+
+.hamb-menu {
+    font-size: 40px;
+    font-weight: 500;
+    height: 240px;
+    display: flex;
+    background-color: #F5F5F5;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: #F5F5F5;
+    z-index: 3;
+}
+
+.hamburger-box {
+    z-index: 4;
+    position: fixed;
+    display: none;
+    width: 40px;
+    height: 32px;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    
+}
+
+.hamburger-line1,
+.hamburger-line2,
+.hamburger-line3 {
+    position: absolute;
+    transition: 0.2s;
+    background-color: #000;
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.hamburger-line2 {
+    top: 14px;
+}
+
+.hamburger-line3 {
+    top: 28px;
+}
+
+.hamburger-line1-active {
+    transform: translateY(14px) rotate(45deg);
+    -webkit-transform: translateY(14px) rotate(45deg);
+}
+
+.hamburger-line2-active {
+    transform: rotate(-45deg);
+}
+
+.hamburger-line3-active {
+    transform: translateY(-14px) rotate(45deg);
+    -webkit-transform: translateY(-14px) rotate(45deg);
+}
+
+.menu {
+    font-size: 20px;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu_item {
+    text-decoration: none;
+    transition: 0.2s;
+    color: #000;
+}
+
+.menu_item:hover {
+    color: #109AD6;
+}
+
+.Home {
+    padding-top: 80px;
+    text-align: center;
+}
+
+.Title {
+    max-width: 100%;
+}
+
+.Subtitle {
+    font-size: 24px;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.Subtitle-short {
+    display: none;
+}
+
+.Info {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.slider {
+    display: flex;
+}
+
+.slider-line {
+
+}
+
+.Slider_img {
+    display: none;
+    width: 100%;
+}
+
+.prev, .next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    background-color: #eee;
+    color: #666;
+    font-weight: bold;
+    user-select: none;
+    width: 200px;
+    font-size: 24px;
+    transition: 0.4s;
+    border-radius: 25px 0 0 25px;
+}
+
+.next {
+    border-radius: 0 25px 25px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: #bbb;
+}
+
+.About {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.About-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 540px;
+}
+
+.About-box-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 540px;
+}
+
+.About-box-text {
+    width: 40%;
+}
+
+.About-box-image {
+    width: 40%;
+}
+
+.About-box-image-img {
+    width: 100%;
+ }
+
+.About-box-title {
+    color: #109AD6;
+    font-size: 40px;
+}
+
+.About-box-subtitle {
+    color: #000;
+    font-size: 28px;
+}
+
+.Updates {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    height: 800px;
+    border-top: solid 80px #fff;
+}
+
+.Updates-title {
+    margin-top: 40px;
+    color: #1799D5;
+    font-size: 96px;
+}
+
+.Updates-box {
+    background-color: #fff;
+    max-width: 40%;
+    margin-bottom: 40px;
+}
+
+.Updates-image-img {
+    max-width: 100%;
+}
+
+.Updates-box-subtitle {
+    text-align: center;
+    color: #109AD6;
+    font-size: 36px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #109ad6;
+    width: 100%;
+    height: 80px;
+    margin-top: 80px;
+}
+
+.ToTop {
+    height: 20px;
+}
+
+.ToTopButton {
+    height: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .Subtitle {
+        font-size: 22px;
+    }
+
+    .About-box-title {
+        font-size: 36px;
+    }
+    
+    .About-box-subtitle {
+        font-size: 24px;
+    }
+
+    .About-box {
+        height: 480px;
+    }
+
+    .About-box-reverse {
+        height: 480px;
+    }
+
+    .Updates-box-subtitle {
+        font-size: 32px;
+    }
+
+    .Updates-title {
+        font-size: 80px;
+    }
+    
+    .Updates {
+        height: 720px;
+    }
+}
+
+@media (max-width: 800px) {
+    .Subtitle {
+        font-size: 20px;
+    }
+    .About-box-title {
+        font-size: 32px;
+    }
+    
+    .About-box-subtitle {
+        font-size: 20px;
+    }
+
+    .About-box {
+        height: 400px;
+    }
+
+    .About-box-reverse {
+        height: 400px;
+    }
+
+    .Updates-box-subtitle {
+        font-size: 28px;
+    }
+
+    .Updates-title {
+        font-size: 64px;
+    }
+    
+    .Updates {
+        height: 640px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+
+    .hamburger-box {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .Subtitle {
+        display: none;
+    }
+    
+    .Subtitle-short {
+        display: block;
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .About-box-title {
+        font-size: 28px;
+    }
+    
+    .About-box-subtitle {
+        font-size: 16px;
+    }
+
+    .About-box {
+        height: 320px;
+    }
+
+    .About-box-reverse {
+        height: 320px;
+    }
+
+    .Updates-box-subtitle {
+        font-size: 24px;
+    }
+
+    .Updates-title {
+        font-size: 48px;
+    }
+    
+    .Updates {
+        height: 540px;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+
+    .About-box {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .About-box-reverse {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .About-box-text {
+        width: 90%;
+    }
+
+    .About-box-image {
+        width: 90%;
+    }
+}
